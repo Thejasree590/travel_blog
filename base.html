@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ travel_vlog_entry.title }}</h1>
+<p>{{ travel_vlog_entry.content }}</p>
+{% if travel_vlog_entry.image %}
+    <img src="{{ travel_vlog_entry.image.url }}" alt="{{ travel_vlog_entry.title }}">
+{% else %}
+    <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+{% endif %}
+<div>
+    <h2>Popular Places in the World:</h2>
+    <ul>
+        <li>
+            <h3>Taj Mahal, India</h3>
+            <img src="https://example.com/taj_mahal.jpg" alt="Taj Mahal">
+            <p>The Taj Mahal is an ivory-white marble mausoleum on the right bank of the Yamuna river in the Indian city of Agra. It is one of the most beautiful buildings in the world and a UNESCO World Heritage Site.</p>
+        </li>
+        <li>
+            <h3>Eiffel Tower, Paris, France</h3>
+            <img src="https://example.com/eiffel_tower.jpg" alt="Eiffel Tower">
+            <p>The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is one of the most famous landmarks in the world.</p>
+        </li>
+        <li>
+            <h3>Machu Picchu, Peru</h3>
+            <img src="https://example.com/machu_picchu.jpg" alt="Machu Picchu">
+            <p>Machu Picchu is an ancient Incan citadel located in the Andes Mountains of Peru. It is a UNESCO World Heritage Site and a popular tourist destination.</p>
+        </li>
+        <li>
+            <h3>Great Barrier Reef, Australia</h3>
+            <img src="https://example.com/great_barrier_reef.jpg" alt="Great Barrier Reef">
+            <p>The Great Barrier Reef is the world's largest coral reef system located off the coast of Queensland, Australia. It is renowned for its biodiversity and marine life.</p>
+        </li>
+        <li>
+            <h3>Grand Canyon, USA</h3>
+            <img src="https://example.com/grand_canyon.jpg" alt="Grand Canyon">
+            <p>The Grand Canyon is a steep-sided canyon carved by the Colorado River in Arizona, USA. It is one of the most iconic natural landmarks in the United States.</p>
+        </li>
+        <li>
+            <h3>Pyramids of Giza, Egypt</h3>
+            <img src="https://example.com/pyramids_of_giza.jpg" alt="Pyramids of Giza">
+            <p>The Pyramids of Giza are ancient Egyptian pyramids located on the Giza Plateau, outside Cairo. They are among the Seven Wonders of the Ancient World.</p>
+        </li>
+        <li>
+            <h3>Colosseum, Rome, Italy</h3>
+            <img src="https://example.com/colosseum.jpg" alt="Colosseum">
+            <p>The Colosseum is an ancient amphitheater in Rome, Italy. It is one of the greatest works of Roman engineering and architecture and a symbol of ancient Rome's grandeur.</p>
+        </li>
+        <li>
+            <h3>Angkor Wat, Cambodia</h3>
+            <img src="https://example.com/angkor_wat.jpg" alt="Angkor Wat">
+            <p>Angkor Wat is a temple complex in Cambodia and the largest religious monument in the world. It was originally constructed as a Hindu temple for the Khmer Empire.</p>
+        </li>
+    </ul>
+</div>
+{% endblock %}
